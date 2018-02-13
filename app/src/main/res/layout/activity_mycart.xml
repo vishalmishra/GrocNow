@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dev1.vishalmishra.grocnow.mycart">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/ctoolbar"
+        android:background="@drawable/cal_back_gradient"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        />
+    <include
+        layout="@layout/empty_cart"
+        android:id="@+id/empty"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ctoolbar"
+        android:layout_above="@+id/bottom"
+        android:scrollbars="none">
+    <com.dev1.vishalmishra.grocnow.CustomRecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/crecyclerview">
+    </com.dev1.vishalmishra.grocnow.CustomRecyclerView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/bottom"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:background="@drawable/list_border"
+        android:layout_alignParentBottom="true">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Amount : "
+                android:textStyle="bold"
+                android:id="@+id/am"
+                android:layout_gravity="end"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="70dp"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/Rs"
+                android:layout_gravity="end"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="60dp"
+                />
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="0"
+                android:id="@+id/amount"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="25dp"/>
+        </RelativeLayout>
+        <Button
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:layout_height="50dp"
+            android:text="Proceed to Checkout"
+            android:textColor="#fff"
+            android:textAllCaps="false"
+            android:id="@+id/proceed"
+            android:textSize="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bt_cart"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:scrollbars="none">
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.dev1.vishalmishra.grocnow.MainActivity"
+        android:orientation="vertical"
+    android:background="#d7d7d7">
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="80dp"
+         android:id="@+id/search_back"
+         android:background="@drawable/cal_back_gradient"
+         android:weightSum="2">
+     <Button
+         android:layout_marginTop="15dp"
+         android:background="@drawable/bt_search"
+         android:layout_width="0dp"
+        android:drawableStart="@drawable/ic_search"
+         android:layout_marginLeft="10dp"
+         android:textSize="15dp"
+         android:hint="@string/search_for_products_and_more"
+         android:paddingEnd="50dp"
+         android:paddingStart="30dp"
+         android:textColor="#666"
+         android:layout_height="50dp"
+         android:layout_weight="2"
+         android:layout_marginRight="10dp"
+         android:id="@+id/search"
+         android:theme="@style/AppTheme2"/>
+
+     </LinearLayout>
+     <android.support.v4.view.ViewPager
+         android:layout_below="@+id/search_back"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/viewPager"
+         />
+
+    <me.relex.circleindicator.CircleIndicator
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="220dp"
+        android:id="@+id/circleIndicator"
+        />
+
+
+     <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="480dp"
+        android:layout_below="@+id/viewPager"
+        android:id="@+id/cate"
+        android:orientation="vertical"
+        android:background="#d7d7d7">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="460dp"
+    android:background="@drawable/cal_back_gradient">
+
+</RelativeLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:id="@+id/layout_categ">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+           android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Categories"
+            android:textColor="#ffffff" />
+        <Button
+            android:layout_width="80dp"
+            android:background="@drawable/bt_login"
+            android:layout_height="30dp"
+            android:layout_marginLeft="155dp"
+            android:layout_marginTop="20dp"
+            android:hint="View All"
+            android:id="@+id/bt_category"
+            android:textColorHint="#333"
+            /></LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        app:cardCornerRadius="8dp"
+        android:layout_below="@+id/layout_categ"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/card"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+<GridLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="2"
+    android:rowCount="2"
+    android:orientation="horizontal">
+<LinearLayout
+    android:layout_width="170dp"
+    android:layout_height="190dp"
+    android:layout_row="0"
+    android:layout_column="0"
+    android:orientation="vertical"
+    android:background="@drawable/border">
+    <ImageView
+        android:layout_height="120dp"
+        android:layout_width="120dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:src="@drawable/chips"/>
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="Chips"
+        />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="170dp"
+        android:layout_height="190dp"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:orientation="vertical"
+        android:background="@drawable/border">
+        <ImageView
+            android:layout_height="120dp"
+            android:layout_width="120dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/dosa"/>
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="South Indian"
+            android:gravity="center"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="170dp"
+        android:layout_height="190dp"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:orientation="vertical"
+        android:background="@drawable/border">
+        <ImageView
+            android:layout_height="120dp"
+            android:layout_width="120dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:src="@drawable/north"/>
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="North Indian"
+            android:gravity="center"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="170dp"
+        android:layout_height="190dp"
+        android:layout_row="1"
+        android:layout_column="1"
+        android:orientation="vertical"
+        android:background="@drawable/border">
+        <ImageView
+            android:layout_height="120dp"
+            android:layout_width="120dp"
+         android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/snacks"/>
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="Italian"
+            android:gravity="center"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+
+
+</GridLayout>
+    </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+</ScrollView>
